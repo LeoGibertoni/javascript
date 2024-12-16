@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos DOM</title>
+    <style>
+        body{
+            background-color: rgb(179, 236, 198);
+            font: normal 18pt Arial;
+            color: rgb(253, 0, 177);
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <br>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0] //Busca paragrafo, numero 0 é o primeiro paragrafo e continua 0 / 1 /2 / 3 ....
+        window.document.write('O primeiro paragrafo está escrito: ' + p1.innerText)
+        corpo.style.background = 'black'
+        p1.style.color = 'blue'
+        /*var d = window.document.getElementById('msg')
+        d.style.background = 'green'*/
+        //d.innerText = 'Estou aguardando'
+
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'green'
+
+        //document.write(p1.innerHTML)   innerHTML, puxa a configuração do HTML, como exemplo o Negrito! 
+    </script>
+</body>
+</html>
